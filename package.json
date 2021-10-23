@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/smolyakova30/blog/issues"
   },
-  "homepage": "https://github.com/smolyakova30/blog#readme"
+  "homepage": "https://github.com/smolyakova30/blog#readme",
+  "dependencies": {
+    "express-handlebars": "^5.3.4"
+  }
 }
