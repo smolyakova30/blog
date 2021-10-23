@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
         })
 });
 
-//get comment bi id 
+//get comment by id 
 router.get('/:id', (req, res) => {
     Comment.findAll({
             where: {
