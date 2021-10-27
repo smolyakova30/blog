@@ -4,7 +4,7 @@
 <section>
   <h2>Your Posts</h2>
     {{#each posts as |post|}}
-    <div>
+    <div class="card">
       {{> post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
        <a href="/dashboard/delete/{{post.id}}" class="edit-link">Delete post</a>

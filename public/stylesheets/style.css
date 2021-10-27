@@ -1,0 +1,25 @@
+body {
+    background-color: beige;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: cadetblue;
+}
+
+.card {
+    border: 2px solid cadetblue;
+    width: 60%;
+    margin: 25px;
+    padding: 10px;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
