@@ -95,11 +95,12 @@ router.post('/', withAuth, (req, res) => {
             content: req.body.content,
             user_id: req.session.user_id
         })
-        .then(dbPostData => res.json(dbPostData))
+        .then(dbPostData => res.redirect('/'))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
+        res.redirect('/');
 });
 
 //update post by id
