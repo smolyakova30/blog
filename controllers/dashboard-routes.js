@@ -93,6 +93,24 @@ router.get('/edit/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 })
+
+router.get('/delete/:id', withAuth, (req, res) => {
+    Post.destroy({
+    where: {
+        id: req.params.id
+    }
+}).then(dbCommentData => {
+    if (!dbCommentData) {
+        res.status(404).json({ message: 'We do not have comment with this id' });
+        return;
+    }
+    res.redirect('/dashboard')
+}).catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
+});
+
 router.get('/new', (req, res) => {
     res.render('new-post');
 });
